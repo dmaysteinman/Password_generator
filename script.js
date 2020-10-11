@@ -7,11 +7,16 @@ var generateBtn = document.querySelector("#generate");
 //   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive 
 // }
 
-function randomInterger (num) {
+function randomInterger(num) {
+  const randomNumber = Math.floor(Math.random() * num) + 1;
+// figuring out how the functions tie together
+  console.log(randomNumber, 'randomW');
   return Math.floor(Math.random() * num) + 1;
 }
 
-function randomUpperCase () {
+function randomUpperCase() {
+// figuring out how the functions tie together
+  console.log('randomX');
   var lettersBig = [
     "A",
     "B",
@@ -43,7 +48,9 @@ function randomUpperCase () {
   return lettersBig[index]
 }
 
-function randomLowerCase () {
+function randomLowerCase() {
+// figuring out how the functions tie together
+  console.log('randomY');
   var lettersSmall = [
     "a",
     "b",
@@ -75,7 +82,9 @@ function randomLowerCase () {
   return lettersSmall[index]
 }
 
-function randomSpecial () {
+function randomSpecial() {
+// figuring out how the functions tie together
+  console.log('randomZ');
   var special = [
     "!",
     "#",
@@ -106,13 +115,17 @@ function randomSpecial () {
   return special[index]
 }
 
-randomInterger(128)
-randomUpperCase()
-randomLowerCase()
-randomSpecial()
+// randomInterger(128)
+// randomUpperCase()
+// randomLowerCase()
+// randomSpecial()
 
 // Write password to the #password input
 function writePassword() {
+  randomInterger(128);
+  randomUpperCase();
+  randomLowerCase();
+  randomSpecial();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
