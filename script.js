@@ -161,12 +161,7 @@ console.log(uppercase);
 console.log(lowercase);
 console.log(specialchar);
 }
-//Length
-//Capital Letters
-//Numbers
-//Special Characters
-//guaranteed characters array
-                            
+
 
 
 
