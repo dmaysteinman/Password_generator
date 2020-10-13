@@ -132,9 +132,10 @@ function writePassword() {
   randomSpecial();
 
 
-  for(var i = 0; i < length; i++){
-    console.log(funcArr[randomInterger(funcArr.length - 1)])
-  }
+  // for(var i = 0; i < length; i++) {
+  //   var funcArr = [randomUpperCase(), randomLowerCase(), randomSpecial()];
+  //   console.log(funcArr[Math.floor(Math.random() * funcArr.length)])
+  // }
 
 }
 // Add event listener to generate button
@@ -142,7 +143,7 @@ generateBtn.addEventListener("click", promptUser);
 
 // 
 
-function promptUser () {
+function promptUser() {
   var length = prompt("How long would you like your password to be? Choose a number between 8 and 128");
 if (length == null || length == "" || length<8 || length>128 || isNaN(length)) {
   var password = document.querySelector("#password");
@@ -163,8 +164,13 @@ var specialchar = confirm("Do you want special characters in your password?");
 
 for(var i = 0; i < length; i++){
   var funcArr = [randomUpperCase(), randomLowerCase(), randomSpecial()];
+  var password = document.querySelector("#password");
+  password.value = (funcArr[Math.floor(Math.random() * funcArr.length)])
   console.log(funcArr[Math.floor(Math.random() * funcArr.length)])
+  return;
 }
 
+// var password = document.querySelector("#password");
+//   password.value = (funcArr[Math.floor(Math.random() * funcArr.length)])
 }
 
