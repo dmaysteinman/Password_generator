@@ -1,4 +1,6 @@
 // Assignment Code
+// var inquirer = require('inquirer');
+
 var generateBtn = document.querySelector("#generate");
 
 // function getRandomIntInclusive(min, max) {
@@ -136,9 +138,29 @@ function writePassword() {
 
 }
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", promptUser);
 
+// 
 
+function promptUser () {
+  var length = prompt("How long would you like your password to be? Choose a number between 8 and 128");
+if (length == null || length == "" || length<8 || length>128 || isNaN(length)) {
+  var password = document.querySelector("#password");
+  password.value = "ERROR: INVALID INPUT";
+  return;
+}
+
+var number = confirm("Do you want numbers in your password?");
+var uppercase = confirm("Do you want uppercase letters in your password?");
+var lowercase = confirm("Do you want lowercase letters in your password?");
+var specialchar = confirm("Do you want special characters in your password?");
+
+console.log(length);
+console.log(number);
+console.log(uppercase);
+console.log(lowercase);
+console.log(specialchar);
+}
 //Length
 //Capital Letters
 //Numbers
