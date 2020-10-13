@@ -12,13 +12,13 @@ var generateBtn = document.querySelector("#generate");
 function randomInterger(num) {
   const randomNumber = Math.floor(Math.random() * num) + 1;
 // figuring out how the functions tie together
-  console.log(randomNumber, 'randomW');
+  // console.log(randomNumber, 'randomW');
   return Math.floor(Math.random() * num) + 1;
 }
 
 function randomUpperCase() {
 // figuring out how the functions tie together
-  console.log('randomX');
+  // console.log('randomX');
   var lettersBig = [
     "A",
     "B",
@@ -52,7 +52,7 @@ function randomUpperCase() {
 
 function randomLowerCase() {
 // figuring out how the functions tie together
-  console.log('randomY');
+  // console.log('randomY');
   var lettersSmall = [
     "a",
     "b",
@@ -86,7 +86,7 @@ function randomLowerCase() {
 
 function randomSpecial() {
 // figuring out how the functions tie together
-  console.log('randomZ');
+  // console.log('randomZ');
   var special = [
     "!",
     "#",
@@ -131,10 +131,10 @@ function writePassword() {
   randomLowerCase();
   randomSpecial();
 
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  for(var i = 0; i < length; i++){
+    console.log(funcArr[randomInterger(funcArr.length - 1)])
+  }
 
 }
 // Add event listener to generate button
@@ -155,13 +155,16 @@ var uppercase = confirm("Do you want uppercase letters in your password?");
 var lowercase = confirm("Do you want lowercase letters in your password?");
 var specialchar = confirm("Do you want special characters in your password?");
 
-console.log(length);
-console.log(number);
-console.log(uppercase);
-console.log(lowercase);
-console.log(specialchar);
+// console.log(length);
+// console.log(number);
+// console.log(uppercase);
+// console.log(lowercase);
+// console.log(specialchar);
+
+for(var i = 0; i < length; i++){
+  var funcArr = [randomUpperCase(), randomLowerCase(), randomSpecial()];
+  console.log(funcArr[Math.floor(Math.random() * funcArr.length)])
 }
 
-
-
+}
 
